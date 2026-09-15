@@ -1,0 +1,35 @@
+/*
+name:manjit
+roll:590041123
+day:37 question:1
+date:15-09-2026
+
+Q73: Find the sum of each row of a matrix and store it in an array.
+*/
+
+#include <stdio.h>
+
+int main()
+{
+    int r, c, i, j;
+    scanf("%d %d", &r, &c);
+
+    int a[r][c], sum[r];
+
+    for(i = 0; i < r; i++)
+    {
+        sum[i] = 0;
+        for(j = 0; j < c; j++)
+        {
+            scanf("%d", &a[i][j]);
+            sum[i] += a[i][j];
+        }
+    }
+
+    for(i = 0; i < r; i++)
+    {
+        printf("%d ", sum[i]);
+    }
+
+    return 0;
+}
