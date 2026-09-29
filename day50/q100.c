@@ -1,0 +1,36 @@
+/*
+name:manjit
+roll:590041123
+day:50 question:2
+date:28-09-2026
+
+Q100: Print all sub-strings of a string.
+*/
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100];
+    int i, j, k, n;
+    int first = 1;
+
+    scanf("%s", str);
+    n = strlen(str);
+
+    for (i = 0; i < n; i++) {
+        for (j = i; j < n; j++) {
+
+            if (!first)
+                printf(",");
+
+            for (k = i; k <= j; k++) {
+                printf("%c", str[k]);
+            }
+
+            first = 0;
+        }
+    }
+
+    return 0;
+}
