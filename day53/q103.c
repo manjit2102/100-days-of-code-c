@@ -1,8 +1,8 @@
 /*
 name:manjit
 roll:590041123
-day:52 question:1
-date:30-09-2026
+day:53 question:1
+date:01-10-2026
 
 Q103: Find the leftmost pivot index of an array.
 */
