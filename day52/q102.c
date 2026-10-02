@@ -1,7 +1,7 @@
 /*
 name:manjit
 roll:590041123
-day:51 question:2
+day:52 question:1
 date:30-09-2026
 
 Q102: Find the index of the smallest element greater
