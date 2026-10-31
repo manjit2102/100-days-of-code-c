@@ -1,0 +1,44 @@
+/*
+name:manjit
+roll:590041123
+day:78 question:1
+date:26-10-2026
+
+Q128: Read a text file and count vowels and consonants.
+*/
+
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    FILE *fp;
+    char ch;
+    int vowels = 0, consonants = 0;
+
+    fp = fopen("text.txt", "r");
+
+    if (fp == NULL) {
+        printf("Error: text.txt does not exist!\n");
+        return 1;
+    }
+
+    while ((ch = fgetc(fp)) != EOF) {
+        ch = tolower(ch);
+
+        if (ch >= 'a' && ch <= 'z') {
+            if (ch == 'a' || ch == 'e' || ch == 'i' ||
+                ch == 'o' || ch == 'u') {
+                vowels++;
+            } else {
+                consonants++;
+            }
+        }
+    }
+
+    fclose(fp);
+
+    printf("Vowels: %d\n", vowels);
+    printf("Consonants: %d\n", consonants);
+
+    return 0;
+}
